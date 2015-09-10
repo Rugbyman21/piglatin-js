@@ -1,4 +1,5 @@
 var pigLatin = function(word) {
+
   var consonants = ['b','c','d','f', 'g','h', 'j', 'k', 'l', 'm', 'n', 'p', 'q', 'r', 's', 't', 'v', 'w', 'x', 'y',
   'z'];
 
@@ -16,6 +17,22 @@ var pigLatin = function(word) {
 
    };
 };
+
+$(document).ready(function() {
+  $("form#ormfay").submit(function(event) {
+    var input = $("input#word").val();
+    var ordway = pigLatin(input);
+
+    $("#title").text("Igpay Atinlay Anslatortray");
+    $("#label").text("Anslatetray aay ordway intoay igpay atinlay.");
+    $("#button").text("Anslatetray!");
+
+    $("#ordway").text(ordway);
+    alert(ordway);
+    $("#ordway").show();
+    event.preventDefault();
+  });
+});
   // if (consonants.indexOf(firstLetter) !== -1) {
   //
   //   split1.push(firstletter);
